@@ -51,13 +51,9 @@ All submitted applications are managed in the **Case Manager**. This screen prov
 
 #### Examples of Reasoning Outcomes:
 
-```carousel
-![Status Approved](screenshots/status_approved.png)
-<!-- slide -->
-![Status Rejected](screenshots/status_rejected.png)
-<!-- slide -->
-![Status Pending](screenshots/status_pending.png)
-```
+|                 Approved Applicant                  |                 Rejected Applicant                  |                  Pending Review                   |
+| :-------------------------------------------------: | :-------------------------------------------------: | :-----------------------------------------------: |
+| ![Status Approved](screenshots/status_approved.png) | ![Status Rejected](screenshots/status_rejected.png) | ![Status Pending](screenshots/status_pending.png) |
 
 ### 5. Knowledge Studio (Semantic Audit)
 

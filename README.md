@@ -1,4 +1,4 @@
-# Loan Management Ontology System
+# Apex-Semantic-Loan-Portal
 
 ## 1. Project Overview
 

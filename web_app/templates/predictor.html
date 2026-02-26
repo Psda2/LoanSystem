@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+
+{% block title %}Suitability Advisor | NSB Loan System{% endblock %}
+{% block breadcrumb %}Suitability Advisor{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+        <span style="font-size: 2.5rem;">⚖️</span>
+        <div>
+            <h2 style="margin: 0;">Loan Suitability Advisor</h2>
+            <p style="margin: 0; color: var(--text-muted);">Find the perfect loan schema based on your financial profile.</p>
+        </div>
+    </div>
+
+    <form id="advisor-form" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div class="form-group">
+            <label for="age">Current Age</label>
+            <input type="number" id="age" placeholder="e.g. 28" required>
+        </div>
+        <div class="form-group">
+            <label for="employment">Employment Category</label>
+            <select id="employment">
+                <option value="Salaried">Salaried Employee</option>
+                <option value="Self-Employed">Self-Employed / Business</option>
+                <option value="Retired">Retired / Pensioner</option>
+                <option value="Student">Unemployed / Student</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="salary">Monthly Base Salary / Income (LKR)</label>
+            <input type="number" id="salary" placeholder="e.g. 150000" required>
+        </div>
+        <div class="form-group">
+            <label for="expenses">Total Monthly Expenses (LKR)</label>
+            <input type="number" id="expenses" placeholder="e.g. 40000" required>
+        </div>
+        <div class="form-group">
+            <label for="loan-amount">Desired Loan Amount (LKR)</label>
+            <input type="number" id="loan-amount" placeholder="e.g. 1000000" required>
+        </div>
+        <div class="form-group">
+            <label for="duration">Desired Duration (Months)</label>
+            <input type="number" id="duration" placeholder="e.g. 60" required>
+        </div>
+        <div class="form-group">
+            <label for="crib">Estimated CRIB Condition</label>
+            <select id="crib">
+                <option value="Good">Excellent (No arrears in 2 years)</option>
+                <option value="Fair">Fair (Minor delays, currently clear)</option>
+                <option value="Poor">Poor (Active defaults/arrears)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="purpose">Primary Motivation</label>
+            <select id="purpose" onchange="toggleSpecialFields()">
+                <option value="" disabled selected>Select Purpose</option>
+                <!-- Populated by JS -->
+            </select>
+        </div>
+
+        <div class="form-group" style="grid-column: span 2;">
+            <label>Available Assets/Collateral (Tick all that apply)</label>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 5px;">
+                <label style="font-weight: normal; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                    <input type="checkbox" name="collateral" value="FD"> Fixed Deposit
+                </label>
+                <label style="font-weight: normal; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                    <input type="checkbox" name="collateral" value="Gold"> Gold/Jewelry
+                </label>
+                <label style="font-weight: normal; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                    <input type="checkbox" name="collateral" value="Property"> Land/Property
+                </label>
+                <label style="font-weight: normal; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                    <input type="checkbox" name="collateral" value="Vehicle"> Vehicle
+                </label>
+            </div>
+        </div>
+
+        <!-- Special Fields (Dynamic) -->
+        <div id="housing-special" class="form-group" style="grid-column: span 2; display: none; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="has-ithurum-niwasa">
+                Do you have an Ithurum Niwasa savings account?
+            </label>
+        </div>
+        <div id="personal-special" class="form-group" style="grid-column: span 2; display: block; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="is-female">
+                Is the applicant female? (For Vanitha Aruna eligibility)
+            </label>
+        </div>
+        <div id="education-special" class="form-group" style="grid-column: span 2; display: none; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" id="has-al-passes">
+                Does the student have G.C.E. A/L 3 Passes?
+            </label>
+        </div>
+
+        <div style="grid-column: span 2; margin-top: 1rem;">
+            <button type="submit" class="btn-primary" style="width: 100%;">🚀 Generate Expert Recommendation</button>
+        </div>
+    </form>
+
+    <div id="prediction-result" style="display: none; margin-top: 3rem; border-top: 2px solid #f1f5f9; padding-top: 2rem;">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <div id="match-score-container" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1rem;">
+                <div id="match-score" style="display: inline-block; padding: 0.5rem 1rem; background: #f0fdf4; color: #166534; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">
+                    Best Match Found
+                </div>
+                <div style="margin-top: 10px; font-size: 0.8rem; color: #64748b;">
+                    Estimated Eligibility Score: <span id="eligibility-score" style="font-weight: bold; color: var(--primary-color);">0%</span>
+                </div>
+            </div>
+            <h3 id="recommended-loan" style="font-size: 2.2rem; color: var(--primary-color); margin: 0.5rem 0;"></h3>
+            <p id="recommendation-desc" style="color: #64748b; font-size: 1.1rem; max-width: 600px; margin: 0 auto;"></p>
+        </div>
+
+        <div class="card" style="background: #eff6ff; border: 1px solid #bfdbfe; margin-bottom: 2rem;">
+            <h4 style="margin-top: 0; color: #1e40af;">🎓 Advisor's Justification</h4>
+            <p id="expert-why" style="margin-bottom: 0; color: #1e3a8a; font-style: italic; line-height: 1.5;"></p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div class="card" style="background: #f8fafc; border: none;">
+                <h4 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">📄 Required Documents</h4>
+                <ul id="document-list" style="margin: 0; padding-left: 1.25rem; color: #334155; line-height: 1.6;">
+                </ul>
+            </div>
+            <div class="card" style="background: #f8fafc; border: none;">
+                <h4 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">🛡️ Security Requirements</h4>
+                <ul id="security-list" style="margin: 0; padding-left: 1.25rem; color: #334155; line-height: 1.6;">
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+            <a href="{{ url_for('applicant') }}" id="apply-btn" class="btn-primary" style="flex: 2; text-decoration: none; text-align: center;">Proceed to Official Application</a>
+            <button class="btn-secondary" style="flex: 1;" onclick="location.reload()">Start Over</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let SCHEMES = {};
+
+async function loadSchemes() {
+    try {
+        const response = await fetch('/schemes');
+        SCHEMES = await response.json();
+        
+        const purposeSelect = document.getElementById('purpose');
+        purposeSelect.innerHTML = '<option value="" disabled selected>Select Purpose</option>';
+        
+        Object.keys(SCHEMES).forEach(category => {
+            const opt = document.createElement('option');
+            opt.value = category;
+            opt.textContent = category + ' Loan';
+            purposeSelect.appendChild(opt);
+        });
+    } catch (err) {
+        console.error("Failed to load schemes:", err);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadSchemes();
+});
+
+function toggleSpecialFields() {
+    const purpose = document.getElementById('purpose').value;
+    document.getElementById('housing-special').style.display = purpose === 'Housing' ? 'block' : 'none';
+    document.getElementById('personal-special').style.display = purpose === 'Personal' ? 'block' : 'none';
+    document.getElementById('education-special').style.display = purpose === 'Education' ? 'block' : 'none';
+}
+
+document.getElementById('advisor-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Show loading state
+    const btn = e.target.querySelector('button[type="submit"]');
+    const oldText = btn.textContent;
+    btn.textContent = '🔄 Consulting Knowledge Base...';
+    btn.disabled = true;
+
+    // Get checked collateral
+    const collateral = Array.from(document.querySelectorAll('input[name="collateral"]:checked')).map(cb => cb.value);
+
+    const data = {
+        age: document.getElementById('age').value,
+        employment: document.getElementById('employment').value,
+        salary: document.getElementById('salary').value,
+        expenses: document.getElementById('expenses').value,
+        amount: document.getElementById('loan-amount').value,
+        duration: document.getElementById('duration').value,
+        crib: document.getElementById('crib').value,
+        purpose: document.getElementById('purpose').value,
+        collateral: collateral,
+        hasIthurumAccount: document.getElementById('has-ithurum-niwasa').checked,
+        isFemale: document.getElementById('is-female').checked,
+        hasALPasses: document.getElementById('has-al-passes').checked
+    };
+
+    try {
+        const response = await fetch('/predict', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        
+        document.getElementById('advisor-form').style.display = 'none';
+        document.getElementById('prediction-result').style.display = 'block';
+        
+        document.getElementById('recommended-loan').textContent = result.recommended_loan;
+        document.getElementById('recommendation-desc').textContent = result.description;
+        document.getElementById('expert-why').textContent = result.justification;
+        document.getElementById('eligibility-score').textContent = result.score + '%';
+        
+        const docList = document.getElementById('document-list');
+        docList.innerHTML = '';
+        result.documents.forEach(doc => {
+            const li = document.createElement('li');
+            li.textContent = doc;
+            docList.appendChild(li);
+        });
+
+        const secList = document.getElementById('security-list');
+        secList.innerHTML = '';
+        result.security.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            secList.appendChild(li);
+        });
+
+        // Add loan type to apply link
+        const applyBtn = document.getElementById('apply-btn');
+        applyBtn.href = "{{ url_for('applicant') }}?type=" + data.purpose;
+
+    } catch (err) {
+        alert("Error connecting to advisor: " + err.message);
+        btn.textContent = oldText;
+        btn.disabled = false;
+    }
+});
+</script>
+{% endblock %}

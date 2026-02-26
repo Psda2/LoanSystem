@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}Knowledge Studio | Apex Loan Portal{% endblock %}
+
+{% block content %}
+<div style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end;">
+    <div>
+        <h1 style="font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--primary-color); margin-bottom: 0.25rem;">Knowledge Studio & Semantic Audit</h1>
+        <p style="color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">Advanced ontological trace and dataset insight terminal.</p>
+    </div>
+    <div style="text-align: right;">
+        <span style="font-size: 0.65rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.4rem;">System Status</span>
+        <span style="background: #ecfdf5; color: #059669; padding: 0.3rem 0.75rem; border-radius: 4px; font-size: 0.7rem; font-weight: 800; border: 1px solid #d1fae5;">● Knowledge Stream Active</span>
+    </div>
+</div>
+
+<div class="terminal-layout">
+    <div class="terminal-header">
+        <div class="title">
+            <span class="security-tag">Level 4: Authorized Access</span>
+            <span style="opacity: 0.6; margin: 0 0.5rem;">|</span>
+            ONTOLOGICAL_QUERY_STREAM
+        </div>
+        <button class="run-btn" onclick="runQuery()">
+            <span>🔒</span> Execute Audit
+        </button>
+    </div>
+    
+    <div class="terminal-body" style="position: relative;">
+        <!-- Loading Overlay -->
+        <div id="loading-overlay" class="loading-overlay">
+            <div class="loading-spinner"></div>
+            <div style="margin-left: 1rem; font-weight: 800; color: var(--primary-color); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;">Analyzing Graph...</div>
+        </div>
+
+        <!-- Left Pane: Editor -->
+        <div class="editor-pane">
+            <div class="line-numbers" id="line-numbers">
+                1<br>2<br>3<br>4<br>5
+            </div>
+            <textarea id="sparql-editor" class="editor-textarea" spellcheck="false" oninput="updateLineNumbers()">PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX loan: <http://www.semanticweb.org/ontology/loan_approval#>
+
+# Audit all applicants including subclasses
+SELECT ?applicant ?name ?type ?income
+WHERE {
+  ?applicant rdf:type/rdfs:subClassOf* loan:Applicant .
+  ?applicant rdf:type ?type .
+  FILTER(?type != <http://www.w3.org/2002/07/owl#NamedIndividual>)
+  
+  OPTIONAL { ?applicant rdfs:label ?name }
+  OPTIONAL { ?applicant loan:hasMonthlyIncome ?income }
+}
+LIMIT 50</textarea>
+        </div>
+
+        <!-- Right Pane: Output -->
+        <div class="output-pane">
+            <div class="output-header">
+                <span>Dataset Insight Grid</span>
+                <span id="result-count" style="font-weight: 500; opacity: 0.8; letter-spacing: 0;">0 records synced</span>
+            </div>
+            <div class="output-content" id="output-container">
+                <div class="empty-state" style="padding: 3rem; text-align: center; opacity: 0.4;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📡</div>
+                    <p style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Awaiting stream execution...<br>Configure parameters and run audit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function updateLineNumbers() {
+        const textarea = document.getElementById('sparql-editor');
+        const lineNumbers = document.getElementById('line-numbers');
+        const lines = textarea.value.split('\n').length;
+        let numbers = "";
+        for (let i = 1; i <= Math.max(lines, 15); i++) {
+            numbers += i + "<br>";
+        }
+        lineNumbers.innerHTML = numbers;
+    }
+
+    async function runQuery() {
+        const query = document.getElementById('sparql-editor').value;
+        const outputContainer = document.getElementById('output-container');
+        const loader = document.getElementById('loading-overlay');
+        const countDisplay = document.getElementById('result-count');
+
+        loader.style.display = 'flex';
+        
+        try {
+            const response = await fetch('/execute-sparql', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query })
+            });
+
+            const data = await response.json();
+            
+            if (data.error) {
+                outputContainer.innerHTML = `<div class="error-display">ERROR: ${data.error}</div>`;
+                countDisplay.textContent = "0 rows";
+            } else {
+                renderResults(data);
+                countDisplay.textContent = `${data.results.length} rows`;
+            }
+        } catch (err) {
+            outputContainer.innerHTML = `<div class="error-display">CONNECTION ERROR: ${err.message}</div>`;
+        } finally {
+            loader.style.display = 'none';
+        }
+    }
+
+    function renderResults(data) {
+        const outputContainer = document.getElementById('output-container');
+        if (data.results.length === 0) {
+            outputContainer.innerHTML = '<div style="padding: 2rem; text-align: center; color: #666; font-size: 0.85rem;">Query executed successfully. Result set is empty.</div>';
+            return;
+        }
+
+        let html = '<table class="sparql-table"><thead><tr>';
+        data.vars.forEach(v => {
+            html += `<th>${v}</th>`;
+        });
+        html += '</tr></thead><tbody>';
+
+        data.results.forEach(row => {
+            html += '<tr>';
+            data.vars.forEach(v => {
+                html += `<td>${row[v] !== undefined ? row[v] : ''}</td>`;
+            });
+            html += '</tr>';
+        });
+
+        html += '</tbody></table>';
+        outputContainer.innerHTML = html;
+    }
+
+    // Initial sync
+    window.onload = updateLineNumbers;
+</script>
+{% endblock %}

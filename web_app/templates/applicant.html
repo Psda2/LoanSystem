@@ -1,0 +1,449 @@
+{% extends "base.html" %}
+
+{% block title %}Loan Applicant | NSB Loan System{% endblock %}
+{% block breadcrumb %}Loan Applicant{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 1000px; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 1rem;">
+        <div>
+            <h2 style="margin: 0; color: var(--primary-color);">Loan Application Form</h2>
+            <p style="margin: 0.25rem 0 0; color: var(--text-muted); font-size: 0.9rem;">Complete all sections for a comprehensive semantic evaluation.</p>
+        </div>
+        <div class="admin-badge" style="background: #e0f2fe; color: #0369a1;">Banking Standard v4.2</div>
+    </div>
+    
+    <form id="evaluation-form">
+        <!-- Section 1: Loan Selection -->
+        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #e2e8f0;">
+            <h3 style="margin-top: 0; font-size: 1rem; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.25rem;">1. Scheme Selection</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Primary Loan Type</label>
+                    <select id="loan-type" onchange="handleTypeChange()" required>
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="Housing">Housing Loan</option>
+                        <option value="Personal">Personal Loan</option>
+                        <option value="Education">Education Loan</option>
+                    </select>
+                </div>
+                <div class="form-group" id="sub-type-container" style="display: none;">
+                    <label>Specific Loan Scheme</label>
+                    <select id="loan-sub-type" onchange="handleSubTypeChange()" required>
+                        <!-- Populated by JS -->
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Personal Information -->
+        <div class="form-section">
+            <h3 class="section-title">2. Personal Information</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Full Name (As per NIC)</label>
+                    <input type="text" id="full-name" placeholder="Enter full name" required />
+                </div>
+                <div class="form-group">
+                    <label>NIC Number</label>
+                    <input type="text" id="nic-number" placeholder="e.g. 199012345678" required />
+                </div>
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input type="date" id="dob" onchange="calculateAge()" required />
+                </div>
+                <div class="form-group">
+                    <label>Calculated Age</label>
+                    <input type="number" id="age" readonly style="background: #f1f5f9;" />
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="radio" name="gender" value="male" checked> Male
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="radio" name="gender" value="female"> Female
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Residency Status</label>
+                    <select id="residency">
+                        <option value="Resident">Resident</option>
+                        <option value="Non-Resident">Non-Resident</option>
+                        <option value="Overseas">Overseas Resident</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; margin-top: 1.5rem;">
+                        <input type="checkbox" id="is-srilankan" checked /> Sri Lankan Citizen
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Professional & Financial -->
+        <div class="form-section">
+            <h3 class="section-title">3. Professional & Financial Profile</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Employment Type</label>
+                    <select id="employment-type" onchange="handleEmploymentChange()">
+                        <option value="Salaried">Salaried Employee</option>
+                        <option value="Self-Employed">Self-Employed / Business</option>
+                        <option value="Retired">Pensioner / Retiree</option>
+                        <option value="Student">Student</option>
+                    </select>
+                </div>
+                <div class="form-group" id="sector-group">
+                    <label>Employment Sector</label>
+                    <select id="sector">
+                        <option value="Government">Government</option>
+                        <option value="Private">Private</option>
+                        <option value="Semi-Gov">Semi-Government</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Months in Current Role/Business</label>
+                    <input type="number" id="tenure-months" value="24" />
+                </div>
+                <div class="form-group" style="padding-top: 1.5rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                        <input type="checkbox" id="is-permanent" checked /> Permanent/Confirmed Role
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Monthly Net Income (LKR)</label>
+                    <input type="number" id="income" value="75000" required />
+                </div>
+                <div class="form-group">
+                    <label>Current DTI Ratio</label>
+                    <input type="number" step="0.01" id="dti" value="0.25" required />
+                </div>
+                <div class="form-group">
+                    <label>CRIB Score</label>
+                    <input type="number" id="crib-score" value="700" required />
+                </div>
+                <div class="form-group" style="padding-top: 1.5rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                        <input type="checkbox" id="has-arrears" /> Has Previous Arrears
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Loan Details -->
+        <div class="form-section">
+            <h3 class="section-title">4. Loan Requirements</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Requested Loan Amount (LKR)</label>
+                    <input type="number" id="loan-amount" placeholder="e.g. 1000000" required />
+                </div>
+                <div class="form-group">
+                    <label>Preferred Tenure (Months)</label>
+                    <input type="number" id="tenure" value="60" required />
+                </div>
+                <div class="form-group">
+                    <label>Loan Purpose</label>
+                    <select id="purpose">
+                        <option value="Purchase">Home/Property Purchase</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Personal">Personal Use</option>
+                        <option value="Education">Education / Higher Studies</option>
+                        <option value="Business">Business Expansion</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Dynamic Requirements -->
+        <div id="dynamic-requirements" class="form-section" style="display: none; background: #fffbeb; border-color: #fde68a;">
+            <h3 class="section-title" style="color: #92400e;">5. Scheme Specific Requirements</h3>
+            
+            <div id="housing-reqs" style="display: none;" class="form-grid">
+                <div class="form-group">
+                    <label>Estimated Market Valuation (LKR)</label>
+                    <input type="number" id="valuation" value="5000000" />
+                </div>
+                <div class="checkbox-group" style="grid-column: span 2; display: flex; gap: 2rem;">
+                    <label><input type="checkbox" id="clear-title" checked /> Property has Clear Title</label>
+                    <label id="ithurum-label"><input type="checkbox" id="ithurum-account" /> Has Ithurum Niwasa Account</label>
+                </div>
+                <div class="form-group" style="grid-column: span 2;">
+                    <label>Mandatory Documents Provided:</label>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem;">
+                        <label><input type="checkbox" checked disabled /> NIC Copy</label>
+                        <label><input type="checkbox" id="doc-valuation" checked /> Valuation Report</label>
+                        <label><input type="checkbox" id="doc-plan" /> Approved Building Plan</label>
+                        <label><input type="checkbox" id="doc-title" checked /> Title Report (12 yr Extract)</label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="personal-reqs" style="display: none;" class="form-grid">
+                <div class="checkbox-group" style="grid-column: span 2; display: flex; flex-wrap: wrap; gap: 1.5rem;">
+                    <label id="female-label"><input type="checkbox" id="is-female-check" /> Confirmed Female Applicant</label>
+                    <label id="pension-label"><input type="checkbox" id="pension-proof" /> Pension Remittance Proof</label>
+                    <label id="gold-label"><input type="checkbox" id="jewelry-collateral" /> Physical Jewelry Pledged</label>
+                    <label id="fd-label"><input type="checkbox" id="fd-collateral" /> Fixed Deposit Locked</label>
+                </div>
+            </div>
+
+            <div id="education-reqs" style="display: none;" class="form-grid">
+                <div class="form-group">
+                    <label>A/L Subject Area</label>
+                    <select id="subject-area">
+                        <option value="Medicine">Medicine</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="General">Other / General</option>
+                    </select>
+                </div>
+                <div class="checkbox-group" style="grid-column: span 2; display: flex; gap: 2rem;">
+                    <label><input type="checkbox" id="al-passes" checked /> GCE A/L 3 Passes (S or above)</label>
+                    <label><input type="checkbox" id="recognized-inst" checked /> UGC/Ministry Recognized Institute</label>
+                </div>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="admission-letter" checked /> Admission Letter Available</label>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: right; border-top: 1px solid #e2e8f0; padding-top: 2rem;">
+            <button type="button" class="btn-secondary" style="margin-right: 1rem;" onclick="location.reload()">Reset Form</button>
+            <button type="submit" class="btn-primary" style="padding-left: 3rem; padding-right: 3rem;">Evaluate Application</button>
+        </div>
+    </form>
+</div>
+
+<style>
+.form-section {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+}
+.section-title {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+@media (max-width: 768px) {
+    .form-grid { grid-template-columns: 1fr; }
+}
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let SCHEMES = {};
+
+async function loadSchemes() {
+    try {
+        const response = await fetch('/schemes');
+        SCHEMES = await response.json();
+        
+        const typeSelect = document.getElementById('loan-type');
+        typeSelect.innerHTML = '<option value="" disabled selected>Select Category</option>';
+        
+        Object.keys(SCHEMES).forEach(category => {
+            const opt = document.createElement('option');
+            opt.value = category;
+            opt.textContent = category;
+            typeSelect.appendChild(opt);
+        });
+    } catch (err) {
+        console.error("Failed to load schemes:", err);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadSchemes();
+});
+
+function handleTypeChange() {
+    const type = document.getElementById('loan-type').value;
+    const container = document.getElementById('sub-type-container');
+    const select = document.getElementById('loan-sub-type');
+    
+    select.innerHTML = '<option value="" disabled selected>Select Scheme</option>';
+    SCHEMES[type].forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s;
+        opt.textContent = s;
+        select.appendChild(opt);
+    });
+    
+    container.style.display = 'block';
+    updateDynamicSections();
+}
+
+function handleSubTypeChange() {
+    updateDynamicSections();
+}
+
+function handleEmploymentChange() {
+    const type = document.getElementById('employment-type').value;
+    document.getElementById('sector-group').style.display = type === 'Salaried' ? 'block' : 'none';
+    
+    const permWrap = document.getElementById('is-permanent').parentElement;
+    if (type === 'Student' || type === 'Retired') {
+        permWrap.style.display = 'none';
+        document.getElementById('is-permanent').checked = false;
+    } else {
+        permWrap.style.display = 'flex';
+    }
+}
+
+function calculateAge() {
+    const dob = new Date(document.getElementById('dob').value);
+    const diff = Date.now() - dob.getTime();
+    const ageDate = new Date(diff);
+    const age = Math.abs(ageDate.getUTCFullYear() - 1970);
+    document.getElementById('age').value = isNaN(age) ? '' : age;
+}
+
+function updateDynamicSections() {
+    const type = document.getElementById('loan-type').value;
+    const subType = document.getElementById('loan-sub-type').value;
+    const dynamicContainer = document.getElementById('dynamic-requirements');
+    
+    // Hide all first
+    dynamicContainer.style.display = type ? 'block' : 'none';
+    document.getElementById('housing-reqs').style.display = 'none';
+    document.getElementById('personal-reqs').style.display = 'none';
+    document.getElementById('education-reqs').style.display = 'none';
+
+    if (type === 'Housing') {
+        document.getElementById('housing-reqs').style.display = 'grid';
+        document.getElementById('ithurum-label').style.display = subType === 'Ithurum Niwasa' ? 'flex' : 'none';
+    } else if (type === 'Personal') {
+        document.getElementById('personal-reqs').style.display = 'grid';
+        document.getElementById('female-label').style.display = subType === 'Vanitha Aruna' ? 'flex' : 'none';
+        document.getElementById('pension-label').style.display = subType === 'Pensioners Loan Scheme' ? 'flex' : 'none';
+        document.getElementById('gold-label').style.display = subType === 'Gold Loan' ? 'flex' : 'none';
+        document.getElementById('fd-label').style.display = subType === 'FD Backed Loan' ? 'flex' : 'none';
+    } else if (type === 'Education') {
+        document.getElementById('education-reqs').style.display = 'grid';
+    }
+}
+
+function showToast(title, message, type = 'success') {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    
+    const icon = type === 'success' ? '✅' : '❌';
+    
+    toast.innerHTML = `
+        <div class="toast-icon">${icon}</div>
+        <div class="toast-content">
+            <div class="toast-title">${title}</div>
+            <div class="toast-message">${message}</div>
+        </div>
+    `;
+    
+    container.appendChild(toast);
+    
+    // Auto remove after 3s
+    setTimeout(() => {
+        toast.style.animation = 'toastOut 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards';
+        setTimeout(() => toast.remove(), 500);
+    }, 3000);
+}
+
+document.getElementById('evaluation-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const submitBtn = e.target.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Processing...';
+
+    const formData = {
+        meta: {
+            name: document.getElementById('full-name').value,
+            nic: document.getElementById('nic-number').value,
+            dob: document.getElementById('dob').value,
+            gender: document.querySelector('input[name="gender"]:checked').value,
+            isSriLankan: document.getElementById('is-srilankan').checked,
+            residency: document.getElementById('residency').value,
+            age: document.getElementById('age').value
+        },
+        professional: {
+            type: document.getElementById('employment-type').value,
+            sector: document.getElementById('sector').value,
+            months: document.getElementById('tenure-months').value,
+            isPermanent: document.getElementById('is-permanent').checked
+        },
+        financial: {
+            income: document.getElementById('income').value,
+            dti: document.getElementById('dti').value,
+            crib: document.getElementById('crib-score').value,
+            hasArrears: document.getElementById('has-arrears').checked
+        },
+        loan: {
+            type: document.getElementById('loan-type').value,
+            subType: document.getElementById('loan-sub-type').value,
+            amount: document.getElementById('loan-amount').value,
+            tenure: document.getElementById('tenure').value,
+            purpose: document.getElementById('purpose').value
+        },
+        dynamic: {
+            valuation: document.getElementById('valuation').value,
+            clearTitle: document.getElementById('clear-title').checked,
+            ithurumAcc: document.getElementById('ithurum-account').checked,
+            isFemale: document.getElementById('is-female-check').checked,
+            hasPension: document.getElementById('pension-proof').checked,
+            hasJewelry: document.getElementById('jewelry-collateral').checked,
+            hasFD: document.getElementById('fd-collateral').checked,
+            subjectArea: document.getElementById('subject-area').value,
+            alPasses: document.getElementById('al-passes').checked,
+            isRecognized: document.getElementById('recognized-inst').checked,
+            hasAdmission: document.getElementById('admission-letter').checked
+        }
+    };
+
+    try {
+        const response = await fetch('/evaluate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+        localStorage.setItem('lastResult', JSON.stringify(result));
+        
+        showToast('Submission Successful', `Applicant ${formData.meta.name} has been added to the ontology.`);
+        
+        // Wait a bit for the user to see the toast before redirect
+        setTimeout(() => {
+            window.location.href = '/status';
+        }, 1500);
+
+    } catch (err) {
+        showToast('Error', 'Failed to submit application. Please check server connection.', 'error');
+        console.error(err);
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+    }
+});
+</script>
+{% endblock %}

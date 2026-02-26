@@ -1,0 +1,2892 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:loan="http://www.semanticweb.org/ontology/loan_approval#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:rest rdf:nodeID="A1"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#FixedDeposit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#CourseCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:nodeID="A4"/>
+    <rdf:first rdf:nodeID="A5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:withRestrictions rdf:nodeID="A9"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasPurpose">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/loan_approval#LoanPurpose"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <owl:someValuesFrom rdf:nodeID="A15"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasCRIBScore"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Vehicle">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Asset"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasPreviousArrears"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:rest rdf:nodeID="A18"/>
+    <rdf:first rdf:nodeID="A19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:rest rdf:nodeID="A21"/>
+    <rdf:first rdf:nodeID="A22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#HousingLoanApprovals">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ProfessionalCert"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A27"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedVanithaArunaApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoanApprovals"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SelfEmployed"/>
+    <owl:equivalentClass rdf:nodeID="A28"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasBusinessRegistration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:rest rdf:nodeID="A30"/>
+    <rdf:first rdf:nodeID="A31"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#FixedDeposit">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Asset"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:rest rdf:nodeID="A33"/>
+    <rdf:first rdf:nodeID="A34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasPensionProof"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">650</xsd:maxExclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <owl:someValuesFrom rdf:nodeID="A38"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:rest rdf:nodeID="A40"/>
+    <rdf:first rdf:nodeID="A41"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <rdf:rest rdf:nodeID="A43"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Guarantor"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <owl:someValuesFrom rdf:nodeID="A45"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#PolicyRejection">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#RejectedOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#HousingLoan">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Loan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A48"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#maxUnsecuredLimit">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <rdf:rest rdf:nodeID="A50"/>
+    <rdf:first rdf:nodeID="A51"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A53"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <owl:withRestrictions rdf:nodeID="A55"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <owl:someValuesFrom rdf:nodeID="A57"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasBusinessRegistration">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <rdf:rest rdf:nodeID="A59"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#UnrecognizedInstitutionApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <rdf:rest rdf:nodeID="A61"/>
+    <rdf:first rdf:nodeID="A62"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedSelfEmployedPersonalLoanApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoanApprovals"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SelfEmployed"/>
+    <owl:equivalentClass rdf:nodeID="A63"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#SubjectArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#isAgedBelow25">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <owl:someValuesFrom rdf:nodeID="A65"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasPreviousArrears">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#LandDeed1">
+    <loan:hasClearTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:hasClearTitle>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SuitableGuarantor"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasGuarantor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#MedAdmission">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#AdmissionLetter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7000000</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <rdf:rest rdf:nodeID="A69"/>
+    <rdf:first rdf:nodeID="A70"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isRecognizedInstitution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <rdf:rest rdf:nodeID="A73"/>
+    <rdf:first rdf:nodeID="A74"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <owl:withRestrictions rdf:nodeID="A75"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <rdf:rest rdf:nodeID="A77"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Student"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <owl:hasValue rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Medicine"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasSubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <owl:intersectionOf rdf:nodeID="A80"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <rdf:rest rdf:nodeID="A81"/>
+    <rdf:first rdf:nodeID="A82"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A84"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoan"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#appliesFor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <rdf:rest rdf:nodeID="A87"/>
+    <rdf:first rdf:nodeID="A88"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <rdf:rest rdf:nodeID="A90"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <owl:someValuesFrom rdf:nodeID="A92"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <rdf:rest rdf:nodeID="A94"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#FinancialRejection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <owl:hasValue rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Engineering"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasSubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A96">
+    <owl:someValuesFrom rdf:nodeID="A97"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A98">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A99"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A100">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000000</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A101">
+    <owl:intersectionOf rdf:nodeID="A102"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A103"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A104">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isSriLankan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#FDBackedLoan">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+    <owl:equivalentClass rdf:nodeID="A105"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A106">
+    <owl:someValuesFrom rdf:nodeID="A107"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasDTI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A108">
+    <owl:withRestrictions rdf:nodeID="A47"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A109">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#EducationLoan"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#appliesFor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedIFSLSApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#EducationLoanApprovals"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Student"/>
+    <owl:equivalentClass rdf:nodeID="A110"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedGoldLoanApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoanApprovals"/>
+    <owl:equivalentClass rdf:nodeID="A101"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A111">
+    <rdf:rest rdf:nodeID="A112"/>
+    <rdf:first rdf:nodeID="A113"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#SalariedEmployee">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A114">
+    <rdf:rest rdf:nodeID="A115"/>
+    <rdf:first rdf:nodeID="A116"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A110">
+    <owl:intersectionOf rdf:nodeID="A117"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A118">
+    <rdf:rest rdf:nodeID="A119"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#TechnicalRejection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A120">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SuitableGuarantor"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasGuarantor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A121">
+    <rdf:rest rdf:nodeID="A122"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <owl:someValuesFrom rdf:nodeID="A123"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasLoanTenure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A124">
+    <owl:intersectionOf rdf:nodeID="A125"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A126">
+    <owl:withRestrictions rdf:nodeID="A26"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A127">
+    <owl:withRestrictions rdf:nodeID="A128"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A129">
+    <owl:withRestrictions rdf:nodeID="A130"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A131">
+    <rdf:rest rdf:nodeID="A58"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#NonResidentApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A132">
+    <owl:hasValue rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Engineering"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasSubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A133">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedOutcome"/>
+    <owl:equivalentClass rdf:nodeID="A134"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A135">
+    <rdf:rest rdf:nodeID="A136"/>
+    <rdf:first rdf:nodeID="A137"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Student">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#PersonalLoanApprovals">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#EmploymentSector">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Loan_Nimal">
+    <rdfs:label>Home Construction - Nimal</rdfs:label>
+    <loan:hasLoanTenure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</loan:hasLoanTenure>
+    <loan:requestedLoanAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000000</loan:requestedLoanAmount>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A122">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A138"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A139">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A140"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A141">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A142">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A143">
+    <rdf:rest rdf:nodeID="A144"/>
+    <rdf:first rdf:nodeID="A145"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#InsurancePolicy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A146">
+    <rdf:rest rdf:nodeID="A139"/>
+    <rdf:first rdf:nodeID="A147"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A148">
+    <owl:withRestrictions rdf:nodeID="A149"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Medicine">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A150">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A151"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A152">
+    <rdf:rest rdf:nodeID="A153"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedEducationLoanApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A154">
+    <rdf:rest rdf:nodeID="A155"/>
+    <rdf:first rdf:nodeID="A156"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A157">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A158"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A159">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A160"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A161">
+    <owl:intersectionOf rdf:nodeID="A162"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasEmploymentType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A163">
+    <owl:members rdf:nodeID="A164"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A165">
+    <rdf:rest rdf:nodeID="A98"/>
+    <rdf:first rdf:nodeID="A166"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A167">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#NamalNIC">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#NationalIdentityCard"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A168">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SuitableGuarantor"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasGuarantor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#TwelveYearExtract">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A169">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A156">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SuitableGuarantor"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasGuarantor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A102">
+    <rdf:rest rdf:nodeID="A170"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoanApprovals"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:nodeID="A171"/>
+    <rdf:first rdf:nodeID="A172"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A173">
+    <owl:unionOf rdf:nodeID="A174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A175">
+    <rdf:rest rdf:nodeID="A176"/>
+    <rdf:first rdf:nodeID="A177"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A178">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A179"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A180">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40000</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A181">
+    <owl:withRestrictions rdf:nodeID="A182"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A183"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#App_DilaniWijesekara">
+    <rdfs:label>Dilani Wijesekara</rdfs:label>
+    <loan:isSriLankan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isSriLankan>
+    <loan:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</loan:hasAge>
+    <loan:hasMonthlyIncome rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</loan:hasMonthlyIncome>
+    <loan:appliesFor rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Loan_Dilani"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Student"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A184">
+    <rdf:rest rdf:nodeID="A185"/>
+    <rdf:first rdf:nodeID="A186"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A187">
+    <owl:intersectionOf rdf:nodeID="A188"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A189">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasClearTitle"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A190">
+    <rdf:rest rdf:nodeID="A191"/>
+    <rdf:first rdf:nodeID="A173"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <owl:withRestrictions rdf:nodeID="A192"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A193">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A141"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A194">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Student"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#monthsInCurrentJob">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A195">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isSriLankan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A196">
+    <owl:intersectionOf rdf:nodeID="A197"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A198">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A199">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SuitableGuarantor"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasGuarantor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A200">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A201">
+    <rdf:rest rdf:nodeID="A202"/>
+    <rdf:first rdf:nodeID="A203"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A204">
+    <rdf:rest rdf:nodeID="A205"/>
+    <rdf:first rdf:nodeID="A206"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A207">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A208"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#EducationLoanApprovals">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A209">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Asset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A210">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasIthurumNiwasaAccount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A208">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A211">
+    <rdf:rest rdf:nodeID="A212"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SalariedEmployee"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasClearTitle">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A213">
+    <owl:intersectionOf rdf:nodeID="A214"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A215">
+    <rdf:rest rdf:nodeID="A216"/>
+    <rdf:first rdf:nodeID="A217"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <owl:hasValue rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Medicine"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasSubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A218">
+    <rdf:rest rdf:nodeID="A219"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ExceededTenureApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A220">
+    <owl:intersectionOf rdf:nodeID="A211"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A221">
+    <owl:someValuesFrom rdf:nodeID="A222"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasLoanTenure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A223">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A212">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A224"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A225">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A226"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A186">
+    <owl:someValuesFrom rdf:nodeID="A126"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A227">
+    <owl:withRestrictions rdf:nodeID="A17"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A179">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasClearTitle"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A228">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isSriLankan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A229">
+    <owl:withRestrictions rdf:nodeID="A230"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A231">
+    <owl:unionOf rdf:nodeID="A232"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <owl:someValuesFrom rdf:nodeID="A196"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasCollateral"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A233">
+    <rdf:rest rdf:nodeID="A234"/>
+    <rdf:first rdf:nodeID="A95"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A235">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A236">
+    <owl:someValuesFrom rdf:nodeID="A237"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A238">
+    <owl:someValuesFrom rdf:nodeID="A239"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasMonthlyIncome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#isOverseasResident">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedSelfEmployedHousingLoanApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoanApprovals"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SelfEmployed"/>
+    <owl:equivalentClass rdf:nodeID="A240"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A241">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A216">
+    <rdf:rest rdf:nodeID="A242"/>
+    <rdf:first rdf:nodeID="A243"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <owl:withRestrictions rdf:nodeID="A244"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A245">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000000</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#FinancialRejection">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#RejectedOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A246">
+    <rdf:rest rdf:nodeID="A49"/>
+    <rdf:first rdf:nodeID="A35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A247">
+    <rdf:rest rdf:nodeID="A86"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Retiree"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000000</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A128">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A248"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#NonResidentApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PolicyRejection"/>
+    <owl:equivalentClass rdf:nodeID="A249"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A250">
+    <owl:someValuesFrom rdf:nodeID="A8"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasGracePeriod">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A119">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A71"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A134">
+    <owl:unionOf rdf:nodeID="A152"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#appliesFor">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Loan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasGuarantor">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Guarantor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A251">
+    <owl:withRestrictions rdf:nodeID="A252"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A125">
+    <rdf:rest rdf:nodeID="A253"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SalariedEmployee"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A254">
+    <rdf:rest rdf:nodeID="A255"/>
+    <rdf:first rdf:nodeID="A106"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A256">
+    <rdf:rest rdf:nodeID="A39"/>
+    <rdf:first rdf:nodeID="A257"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#UnsuitableGuarantorApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#TechnicalRejection"/>
+    <owl:equivalentClass rdf:nodeID="A258"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#App_SunilChandrasiri">
+    <rdfs:label>Sunil Chandrasiri</rdfs:label>
+    <loan:hasCRIBScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">710</loan:hasCRIBScore>
+    <loan:hasPensionProof rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:hasPensionProof>
+    <loan:isResident rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isResident>
+    <loan:hasDTI rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</loan:hasDTI>
+    <loan:isSriLankan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isSriLankan>
+    <loan:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</loan:hasAge>
+    <loan:hasPreviousArrears rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</loan:hasPreviousArrears>
+    <loan:hasMonthlyIncome rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90000</loan:hasMonthlyIncome>
+    <loan:appliesFor rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Loan_Sunil"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Retiree"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedSalariedHousingLoanApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoanApprovals"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SalariedEmployee"/>
+    <owl:equivalentClass rdf:nodeID="A259"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A260">
+    <rdf:rest rdf:nodeID="A261"/>
+    <rdf:first rdf:nodeID="A221"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A90">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A262"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A263">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A99">
+    <owl:someValuesFrom rdf:nodeID="A264"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A265">
+    <owl:unionOf rdf:nodeID="A266"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A267">
+    <rdf:rest rdf:nodeID="A131"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#NonCitizenApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A268">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isResident"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#HomePurchase">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#LoanPurpose"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Engineering">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A269">
+    <owl:someValuesFrom rdf:nodeID="A270"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A183">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A271">
+    <owl:someValuesFrom rdf:nodeID="A272"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#District">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A273">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A36"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A274">
+    <rdf:rest rdf:nodeID="A275"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedIFSLSApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A276">
+    <rdf:rest rdf:nodeID="A277"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SalariedEmployee"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A248">
+    <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minExclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A278">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isResident"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A279">
+    <owl:someValuesFrom rdf:nodeID="A181"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasMonthlyIncome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasPreviousArrears"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A280">
+    <owl:someValuesFrom rdf:nodeID="A281"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasCRIBScore"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A282">
+    <owl:someValuesFrom rdf:nodeID="A283"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasLoanTenure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#appliesFor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A284">
+    <owl:someValuesFrom rdf:nodeID="A285"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasCollateral"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A286">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAL3Passes"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#UnrecognizedInstitutionApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#TechnicalRejection"/>
+    <owl:equivalentClass rdf:nodeID="A287"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#RejectedOutcome">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A288">
+    <rdf:rest rdf:nodeID="A289"/>
+    <rdf:first rdf:nodeID="A290"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ExceededSubjectLimitApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#LimitRejection"/>
+    <owl:equivalentClass rdf:nodeID="A291"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A202">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A66"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A292">
+    <owl:intersectionOf rdf:nodeID="A32"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A293">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A294">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#InsurancePolicy"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasInsurancePolicy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A295">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasClearTitle"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A137">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#AdmissionLetter"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAdmission"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A296">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A297"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A298">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A299"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A300">
+    <owl:someValuesFrom rdf:nodeID="A301"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <rdf:rest rdf:nodeID="A302"/>
+    <rdf:first rdf:nodeID="A303"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Postgraduate">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#CourseCategory"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#App_NimalSilva">
+    <rdfs:label>Nimal Silva</rdfs:label>
+    <loan:hasCRIBScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">750</loan:hasCRIBScore>
+    <loan:isPermanentRole rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isPermanentRole>
+    <loan:isResident rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isResident>
+    <loan:hasDTI rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</loan:hasDTI>
+    <loan:isSriLankan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isSriLankan>
+    <loan:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</loan:hasAge>
+    <loan:hasPreviousArrears rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</loan:hasPreviousArrears>
+    <loan:hasMonthlyIncome rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000</loan:hasMonthlyIncome>
+    <loan:appliesFor rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Loan_Nimal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SalariedEmployee"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A304">
+    <rdf:rest rdf:nodeID="A305"/>
+    <rdf:first rdf:nodeID="A306"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A307">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedPersonalLoanApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedPersonalLoanApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoanApprovals"/>
+    <owl:equivalentClass rdf:nodeID="A265"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <owl:intersectionOf rdf:nodeID="A308"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A309">
+    <rdf:rest rdf:nodeID="A310"/>
+    <rdf:first rdf:nodeID="A85"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A311">
+    <rdf:rest rdf:nodeID="A246"/>
+    <rdf:first rdf:nodeID="A238"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A312">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasPensionProof"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A306">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#NationalIdentityCard"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasDocument"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasJewelryCollateral">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A313">
+    <rdf:rest rdf:nodeID="A276"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Retiree"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A261">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A210"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A314">
+    <owl:hasValue rdf:resource="http://www.semanticweb.org/ontology/loan_approval#GeneralSubject"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasSubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A217">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#InterestFreeStudentLoan"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#appliesFor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A315">
+    <owl:unionOf rdf:nodeID="A76"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A316">
+    <owl:hasValue rdf:resource="http://www.semanticweb.org/ontology/loan_approval#IT"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasSubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A317">
+    <rdf:rest rdf:nodeID="A256"/>
+    <rdf:first rdf:nodeID="A280"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A318">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A319">
+    <rdf:rest rdf:nodeID="A320"/>
+    <rdf:first rdf:nodeID="A167"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#OverseasHousingLoan">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <owl:withRestrictions rdf:nodeID="A10"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasAL3Passes">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#InterestFreeStudentLoan">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#EducationLoan"/>
+    <owl:equivalentClass rdf:nodeID="A321"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A322">
+    <rdf:rest rdf:nodeID="A323"/>
+    <rdf:first rdf:nodeID="A324"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#KamalAdmission">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#AdmissionLetter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A325">
+    <owl:withRestrictions rdf:nodeID="A150"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A326">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A228"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A327">
+    <rdf:rest rdf:nodeID="A157"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PolicyRejection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A328">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasCollateral">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Asset"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A176">
+    <rdf:rest rdf:nodeID="A146"/>
+    <rdf:first rdf:nodeID="A29"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A329">
+    <rdf:rest rdf:nodeID="A330"/>
+    <rdf:first rdf:nodeID="A331"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A332">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#InsecureEmploymentApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#FinancialRejection"/>
+    <owl:equivalentClass rdf:nodeID="A333"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A334"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A335">
+    <owl:withRestrictions rdf:nodeID="A336"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#NonCitizenApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PolicyRejection"/>
+    <owl:equivalentClass rdf:nodeID="A187"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A103">
+    <owl:intersectionOf rdf:nodeID="A337"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <owl:unionOf rdf:nodeID="A338"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A339">
+    <owl:withRestrictions rdf:nodeID="A200"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A140">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isSriLankan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A340">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A96"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A341">
+    <rdf:rest rdf:nodeID="A175"/>
+    <rdf:first rdf:nodeID="A342"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#NuwanNIC">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#NationalIdentityCard"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasInsurancePolicy">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/loan_approval#InsurancePolicy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Loan_Sunil">
+    <rdfs:label>Home Improvement - Sunil</rdfs:label>
+    <loan:hasLoanTenure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</loan:hasLoanTenure>
+    <loan:requestedLoanAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800000</loan:requestedLoanAmount>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#isFemale">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#App_KamalPerera">
+    <rdfs:label>Kamal Perera</rdfs:label>
+    <loan:hasCRIBScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">680</loan:hasCRIBScore>
+    <loan:hasBusinessRegistration rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:hasBusinessRegistration>
+    <loan:isResident rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isResident>
+    <loan:hasDTI rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.65</loan:hasDTI>
+    <loan:isSriLankan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isSriLankan>
+    <loan:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</loan:hasAge>
+    <loan:hasPreviousArrears rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</loan:hasPreviousArrears>
+    <loan:hasMonthlyIncome rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80000</loan:hasMonthlyIncome>
+    <loan:appliesFor rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Loan_Kamal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SelfEmployed"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A343">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedVanithaArunaApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A344">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A100"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasAge">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A345">
+    <rdf:rest rdf:nodeID="A184"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#EducationLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A346">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A91"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A347">
+    <rdf:rest rdf:nodeID="A348"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SelfEmployed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasCRIBStatus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A302">
+    <rdf:rest rdf:nodeID="A349"/>
+    <rdf:first rdf:nodeID="A350"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A136">
+    <rdf:rest rdf:nodeID="A143"/>
+    <rdf:first rdf:nodeID="A44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A351">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">650</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAL3Passes"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasSubjectArea">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A352">
+    <owl:withRestrictions rdf:nodeID="A353"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A116">
+    <owl:intersectionOf rdf:nodeID="A354"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A337">
+    <rdf:rest rdf:nodeID="A340"/>
+    <rdf:first rdf:nodeID="A78"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A355">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A46"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A356">
+    <owl:someValuesFrom rdf:nodeID="A108"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasDocument">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A357">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A328"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A222">
+    <owl:withRestrictions rdf:nodeID="A358"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A310">
+    <rdf:rest rdf:nodeID="A304"/>
+    <rdf:first rdf:nodeID="A284"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#App_SahanDileepa">
+    <rdfs:label>Sahan Dileepa</rdfs:label>
+    <loan:hasCRIBScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</loan:hasCRIBScore>
+    <loan:isPermanentRole rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isPermanentRole>
+    <loan:isResident rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isResident>
+    <loan:hasDTI rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.15</loan:hasDTI>
+    <loan:isSriLankan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isSriLankan>
+    <loan:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</loan:hasAge>
+    <loan:hasPreviousArrears rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</loan:hasPreviousArrears>
+    <loan:hasMonthlyIncome rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</loan:hasMonthlyIncome>
+    <loan:appliesFor rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Loan_Sahan"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SalariedEmployee"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A359">
+    <rdf:rest rdf:nodeID="A267"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#LowCRIBScoreApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasPreviousArrears"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#LoanPurpose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <rdf:rest rdf:nodeID="A360"/>
+    <rdf:first rdf:nodeID="A198"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A320">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A361"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A255">
+    <rdf:rest rdf:nodeID="A362"/>
+    <rdf:first rdf:nodeID="A279"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A323">
+    <rdf:rest rdf:nodeID="A68"/>
+    <rdf:first rdf:nodeID="A363"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A308">
+    <rdf:rest rdf:nodeID="A364"/>
+    <rdf:first rdf:nodeID="A365"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A283">
+    <owl:withRestrictions rdf:nodeID="A366"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A367">
+    <rdf:rest rdf:nodeID="A178"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A214">
+    <rdf:rest rdf:nodeID="A368"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoanApprovals"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A369">
+    <rdf:rest rdf:nodeID="A370"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SelfEmployed"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A371">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#VanithaAruna"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#appliesFor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Applicant">
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Guarantor"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A372">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasPreviousArrears"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A373">
+    <owl:someValuesFrom rdf:nodeID="A352"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasMonthlyIncome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#LowCRIBScoreApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#FinancialRejection"/>
+    <owl:equivalentClass rdf:nodeID="A374"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A297">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000000</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Loan_Kamal">
+    <rdfs:label>Business Expansion - Kamal</rdfs:label>
+    <loan:hasLoanTenure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</loan:hasLoanTenure>
+    <loan:requestedLoanAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</loan:requestedLoanAmount>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A375">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#PendingApplicant">
+    <owl:equivalentClass rdf:nodeID="A376"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <owl:intersectionOf rdf:nodeID="A377"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A378">
+    <owl:someValuesFrom rdf:nodeID="A379"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A380">
+    <rdf:rest rdf:nodeID="A381"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#EducationLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A287">
+    <owl:intersectionOf rdf:nodeID="A118"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#NuwanHouse">
+    <loan:hasClearTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:hasClearTitle>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A171">
+    <rdf:rest rdf:nodeID="A382"/>
+    <rdf:first rdf:nodeID="A199"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A174">
+    <rdf:rest rdf:nodeID="A383"/>
+    <rdf:first rdf:nodeID="A384"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A382">
+    <rdf:rest rdf:nodeID="A385"/>
+    <rdf:first rdf:nodeID="A386"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A387">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A353">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A388"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A389">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasBusinessRegistration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A390">
+    <owl:someValuesFrom rdf:nodeID="A339"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasDTI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A391">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasJewelryCollateral"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A301">
+    <owl:withRestrictions rdf:nodeID="A392"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#SuitableGuarantor">
+    <owl:equivalentClass rdf:nodeID="A393"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A394">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoan"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#appliesFor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A395">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A396"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A397">
+    <owl:withRestrictions rdf:nodeID="A52"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A393">
+    <owl:intersectionOf rdf:nodeID="A42"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A398">
+    <owl:intersectionOf rdf:nodeID="A369"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A399">
+    <rdf:rest rdf:nodeID="A346"/>
+    <rdf:first rdf:nodeID="A132"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Property">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Asset"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Loan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A400">
+    <owl:members rdf:nodeID="A380"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <owl:intersectionOf rdf:nodeID="A401"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A402">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A312"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A403">
+    <owl:someValuesFrom rdf:nodeID="A229"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A404"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A405">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A406"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <rdf:rest rdf:nodeID="A225"/>
+    <rdf:first rdf:nodeID="A314"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#HInsurance">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#InsurancePolicy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A153">
+    <rdf:rest rdf:nodeID="A307"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedHousingLoanApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A275">
+    <rdf:rest rdf:nodeID="A343"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedIthurumNiwasaApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A407">
+    <owl:members rdf:nodeID="A313"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:rest rdf:nodeID="A408"/>
+    <rdf:first rdf:nodeID="A409"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A410">
+    <rdf:rest rdf:nodeID="A274"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedGoldLoanApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A411">
+    <rdf:rest rdf:nodeID="A412"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#LimitRejection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#AdmissionLetter">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A413">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A414"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A415">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasCoApplicant">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#NationalIdentityCard">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A166">
+    <owl:hasValue rdf:resource="http://www.semanticweb.org/ontology/loan_approval#GeneralSubject"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasSubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasCRIBScore">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Loan_Dilani">
+    <rdfs:label>MSc Degree - Dilani</rdfs:label>
+    <loan:hasLoanTenure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</loan:hasLoanTenure>
+    <loan:requestedLoanAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500000</loan:requestedLoanAmount>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#EducationLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A321">
+    <owl:intersectionOf rdf:nodeID="A345"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A416">
+    <owl:complementOf rdf:nodeID="A417"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A155">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A356"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A145">
+    <owl:someValuesFrom rdf:nodeID="A418"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasDTI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A419">
+    <owl:unionOf rdf:nodeID="A154"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <rdf:rest rdf:nodeID="A326"/>
+    <rdf:first rdf:nodeID="A268"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A420">
+    <rdf:rest rdf:nodeID="A421"/>
+    <rdf:first rdf:nodeID="A422"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasPensionProof">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A224">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isPermanentRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A423">
+    <rdf:rest rdf:nodeID="A159"/>
+    <rdf:first rdf:nodeID="A120"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <owl:withRestrictions rdf:nodeID="A273"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A262">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#FixedDeposit"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasCollateral"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A414">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A424">
+    <owl:intersectionOf rdf:nodeID="A425"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A426">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A189"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A427">
+    <rdf:rest rdf:nodeID="A20"/>
+    <rdf:first rdf:nodeID="A428"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A429">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A195"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#UnsuitableGuarantorApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A386">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#InsurancePolicy"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasInsurancePolicy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedEducationLoanApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#EducationLoanApprovals"/>
+    <owl:equivalentClass rdf:nodeID="A424"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A430">
+    <owl:someValuesFrom rdf:nodeID="A431"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasMonthlyIncome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#StudentAdmission">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#AdmissionLetter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A354">
+    <rdf:rest rdf:nodeID="A432"/>
+    <rdf:first rdf:nodeID="A316"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A362">
+    <rdf:rest rdf:nodeID="A433"/>
+    <rdf:first rdf:nodeID="A389"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasInterestRate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A396">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Loan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A434">
+    <rdf:rest rdf:nodeID="A317"/>
+    <rdf:first rdf:nodeID="A435"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A425">
+    <rdf:rest rdf:nodeID="A190"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Student"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ValuationReport">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A203">
+    <owl:someValuesFrom rdf:nodeID="A436"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasCollateral"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Sunil">
+    <loan:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</loan:hasAge>
+    <loan:hasPreviousArrears rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</loan:hasPreviousArrears>
+    <loan:hasMonthlyIncome rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90000</loan:hasMonthlyIncome>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Guarantor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A437">
+    <owl:unionOf rdf:nodeID="A201"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A418">
+    <owl:withRestrictions rdf:nodeID="A23"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ExceededTenureApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#LimitRejection"/>
+    <owl:equivalentClass rdf:nodeID="A438"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A439">
+    <rdf:rest rdf:nodeID="A440"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedSalariedPersonalLoanApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A441">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A442">
+    <rdf:rest rdf:nodeID="A443"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#FinancialRejection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A370">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A444"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasIthurumNiwasaAccount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A285">
+    <owl:intersectionOf rdf:nodeID="A367"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A384">
+    <owl:intersectionOf rdf:nodeID="A399"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasAdmission">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/loan_approval#AdmissionLetter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#App_AnomaRathnayaka">
+    <rdfs:label>Anoma Rathnayaka</rdfs:label>
+    <loan:hasCRIBScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</loan:hasCRIBScore>
+    <loan:isPermanentRole rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isPermanentRole>
+    <loan:isResident rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isResident>
+    <loan:hasDTI rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</loan:hasDTI>
+    <loan:isSriLankan rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:isSriLankan>
+    <loan:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</loan:hasAge>
+    <loan:hasPreviousArrears rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</loan:hasPreviousArrears>
+    <loan:hasMonthlyIncome rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120000</loan:hasMonthlyIncome>
+    <loan:appliesFor rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Loan_Anoma"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SalariedEmployee"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasEmploymentSector">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/loan_approval#EmploymentSector"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedOutcome">
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontology/loan_approval#RejectedOutcome"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A445">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A358">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A241"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#GeneralSubject">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A151">
+    <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</xsd:minExclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A364">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A144">
+    <rdf:rest rdf:nodeID="A420"/>
+    <rdf:first rdf:nodeID="A373"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A446">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedSelfEmployedHousingLoanApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:nodeID="A375"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A408">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A447"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#VanithaAruna">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+    <owl:equivalentClass rdf:nodeID="A161"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A448">
+    <rdf:rest rdf:nodeID="A449"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Diploma"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A417">
+    <owl:unionOf rdf:nodeID="A427"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A331">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#appliesFor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <rdf:rest rdf:nodeID="A450"/>
+    <rdf:first rdf:nodeID="A220"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A444">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasBusinessRegistration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A438">
+    <owl:intersectionOf rdf:nodeID="A451"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A149">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A351"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A363">
+    <owl:someValuesFrom rdf:nodeID="A54"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasMonthlyIncome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A338">
+    <rdf:rest rdf:nodeID="A452"/>
+    <rdf:first rdf:nodeID="A168"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Government">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#EmploymentSector"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A435">
+    <owl:someValuesFrom rdf:nodeID="A227"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A188">
+    <rdf:rest rdf:nodeID="A298"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PolicyRejection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#isRecognizedInstitution">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A453">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A209"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A454">
+    <owl:intersectionOf rdf:nodeID="A121"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A455">
+    <owl:intersectionOf rdf:nodeID="A456"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A249">
+    <owl:intersectionOf rdf:nodeID="A327"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A303">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isPermanentRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#BuildingPlan">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A457">
+    <rdf:rest rdf:nodeID="A429"/>
+    <rdf:first rdf:nodeID="A278"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <rdf:rest rdf:nodeID="A254"/>
+    <rdf:first rdf:nodeID="A271"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A360">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A318"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A449">
+    <rdf:rest rdf:nodeID="A25"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Postgraduate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A458">
+    <owl:hasValue>Retired</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasEmploymentType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A365">
+    <owl:hasValue rdf:resource="http://www.semanticweb.org/ontology/loan_approval#IT"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasSubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A459">
+    <owl:unionOf rdf:nodeID="A423"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A460">
+    <rdf:rest rdf:nodeID="A311"/>
+    <rdf:first rdf:nodeID="A390"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A461">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A450">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A398"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A462">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A237">
+    <owl:withRestrictions rdf:nodeID="A12"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A463">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A104"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A162">
+    <rdf:rest rdf:nodeID="A464"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Loan_Sahan">
+    <rdfs:label>Personal Development - Sahan</rdfs:label>
+    <loan:hasLoanTenure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</loan:hasLoanTenure>
+    <loan:requestedLoanAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500000</loan:requestedLoanAmount>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A342">
+    <owl:someValuesFrom rdf:nodeID="A148"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasCRIBScore"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <owl:intersectionOf rdf:nodeID="A465"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A226">
+    <owl:someValuesFrom rdf:nodeID="A251"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A422">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasPreviousArrears"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedSalariedPersonalLoanApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoanApprovals"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SalariedEmployee"/>
+    <owl:equivalentClass rdf:nodeID="A124"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A466">
+    <rdf:rest rdf:nodeID="A426"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A115">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A292"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A467">
+    <rdf:rest rdf:nodeID="A72"/>
+    <rdf:first rdf:nodeID="A64"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasDTI">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A468">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A462"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A469">
+    <rdf:rest rdf:nodeID="A467"/>
+    <rdf:first rdf:nodeID="A371"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <owl:intersectionOf rdf:nodeID="A165"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A374">
+    <owl:intersectionOf rdf:nodeID="A442"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A470">
+    <owl:someValuesFrom rdf:nodeID="A471"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A219">
+    <rdf:rest rdf:nodeID="A472"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HighDTIApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Document">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A473">
+    <rdf:rest rdf:nodeID="A83"/>
+    <rdf:first rdf:nodeID="A282"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A381">
+    <rdf:rest rdf:nodeID="A441"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A474">
+    <rdf:rest rdf:nodeID="A218"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ExceededSubjectLimitApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A433">
+    <rdf:rest rdf:nodeID="A457"/>
+    <rdf:first rdf:nodeID="A372"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A428">
+    <owl:intersectionOf rdf:nodeID="A233"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A432">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A470"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A277">
+    <rdf:rest rdf:nodeID="A194"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SelfEmployed"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A138">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasClearTitle"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <owl:withRestrictions rdf:nodeID="A296"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#SwayanRakiya">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A475">
+    <owl:unionOf rdf:nodeID="A410"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasValuationAmount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <rdf:rest rdf:nodeID="A476"/>
+    <rdf:first rdf:nodeID="A403"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A272">
+    <owl:withRestrictions rdf:nodeID="A319"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A330">
+    <rdf:rest rdf:nodeID="A322"/>
+    <rdf:first rdf:nodeID="A269"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A392">
+    <rdf:rest rdf:nodeID="A357"/>
+    <rdf:first rdf:nodeID="A332"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A264">
+    <owl:withRestrictions rdf:nodeID="A477"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A478">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A185">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A286"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#SelfEmployed">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A230">
+    <rdf:rest rdf:nodeID="A193"/>
+    <rdf:first rdf:nodeID="A142"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A451">
+    <rdf:rest rdf:nodeID="A204"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#LimitRejection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A291">
+    <owl:intersectionOf rdf:nodeID="A411"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasMonthlyIncome">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A333">
+    <owl:intersectionOf rdf:nodeID="A479"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A252">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A245"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A480">
+    <owl:someValuesFrom rdf:nodeID="A481"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasGracePeriod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A258">
+    <owl:intersectionOf rdf:nodeID="A482"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A412">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A416"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A160">
+    <owl:someValuesFrom rdf:nodeID="A483"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A484">
+    <owl:withRestrictions rdf:nodeID="A468"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A485">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A458"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A486">
+    <owl:someValuesFrom rdf:nodeID="A127"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasLoanTenure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A487">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7000000</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#NuwanInsurance">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#InsurancePolicy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A97">
+    <owl:withRestrictions rdf:nodeID="A344"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:rest rdf:nodeID="A488"/>
+    <rdf:first rdf:nodeID="A478"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <rdf:rest rdf:nodeID="A489"/>
+    <rdf:first rdf:nodeID="A490"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A404">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isFemale"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A177">
+    <owl:someValuesFrom rdf:nodeID="A397"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasMonthlyIncome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A491">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isSriLankan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A299">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isSriLankan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A492">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A493"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#PensionersLoanScheme">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+    <owl:equivalentClass rdf:nodeID="A455"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#DiviDiriya">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedHousingLoanApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoanApprovals"/>
+    <owl:equivalentClass rdf:nodeID="A231"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A493">
+    <owl:complementOf rdf:nodeID="A315"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A158">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isResident"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A182">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A169"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A494">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isRecognizedInstitution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A130">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A263"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A495">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A387"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A496">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A223"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#IthurumNiwasa">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A497">
+    <owl:intersectionOf rdf:nodeID="A498"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A240">
+    <owl:intersectionOf rdf:nodeID="A347"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#isPermanentRole">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A479">
+    <rdf:rest rdf:nodeID="A492"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#FinancialRejection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A499">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#GoldLoan"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#appliesFor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A421">
+    <rdf:rest rdf:nodeID="A463"/>
+    <rdf:first rdf:nodeID="A494"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A500">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A461"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A259">
+    <owl:intersectionOf rdf:nodeID="A501"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A361">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A366">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A502"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Colombo">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#District"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A379">
+    <owl:withRestrictions rdf:nodeID="A395"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A443">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A305">
+    <rdf:rest rdf:nodeID="A503"/>
+    <rdf:first rdf:nodeID="A504"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Loan_Anoma">
+    <rdfs:label>Emergency Medical - Anoma</rdfs:label>
+    <loan:hasLoanTenure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</loan:hasLoanTenure>
+    <loan:requestedLoanAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500000</loan:requestedLoanAmount>
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A505">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A180"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A242">
+    <rdf:rest rdf:nodeID="A473"/>
+    <rdf:first rdf:nodeID="A480"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A164">
+    <rdf:rest rdf:nodeID="A448"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Degree"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A334">
+    <owl:someValuesFrom rdf:nodeID="A325"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasDTI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#isSriLankan">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A502">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">144</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A477">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A506"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#locatedInDistrict">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/loan_approval#District"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A349">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A491"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A507">
+    <owl:intersectionOf rdf:nodeID="A247"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A508">
+    <owl:members rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A105">
+    <owl:intersectionOf rdf:nodeID="A89"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#LimitRejection">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#RejectedOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A476">
+    <rdf:rest rdf:nodeID="A509"/>
+    <rdf:first rdf:nodeID="A430"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A472">
+    <rdf:rest rdf:nodeID="A359"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#InsecureEmploymentApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A232">
+    <rdf:rest rdf:nodeID="A446"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedSalariedHousingLoanApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#StreetLineCertificate">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A107">
+    <owl:withRestrictions rdf:nodeID="A413"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A510">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#IthurumNiwasa"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#appliesFor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#IT">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SubjectArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#TechnicalRejection">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#RejectedOutcome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A350">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isResident"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A192">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A487"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedRetireePersonalLoanApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoanApprovals"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Retiree"/>
+    <owl:equivalentClass rdf:nodeID="A507"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#hasLoanTenure">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A511">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A512"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#GoldLoan">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A147">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasPreviousArrears"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A506">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000000</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A440">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedSelfEmployedPersonalLoanApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ApprovedIthurumNiwasaApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoanApprovals"/>
+    <owl:equivalentClass rdf:nodeID="A213"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Diploma">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#CourseCategory"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A406">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">650</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A471">
+    <owl:withRestrictions rdf:nodeID="A513"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A377">
+    <rdf:rest rdf:nodeID="A402"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Retiree"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#DisputedTitleApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#TechnicalRejection"/>
+    <owl:equivalentClass rdf:nodeID="A497"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A514">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isFemale"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A117">
+    <rdf:rest rdf:nodeID="A215"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Student"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A243">
+    <owl:someValuesFrom rdf:nodeID="A335"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasAge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A431">
+    <owl:withRestrictions rdf:nodeID="A505"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A205">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A486"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A465">
+    <rdf:rest rdf:nodeID="A469"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SelfEmployed"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A515">
+    <owl:withRestrictions rdf:nodeID="A355"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A170">
+    <rdf:rest rdf:nodeID="A288"/>
+    <rdf:first rdf:nodeID="A499"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A509">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A512">
+    <owl:complementOf rdf:nodeID="A516"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A517">
+    <owl:intersectionOf rdf:nodeID="A93"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#isResident">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A504">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SuitableGuarantor"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasGuarantor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A481">
+    <owl:withRestrictions rdf:nodeID="A495"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A244">
+    <rdf:rest rdf:nodeID="A496"/>
+    <rdf:first rdf:nodeID="A293"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasPreviousArrears"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A368">
+    <rdf:rest rdf:nodeID="A260"/>
+    <rdf:first rdf:nodeID="A510"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A236"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A281">
+    <owl:withRestrictions rdf:nodeID="A405"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A289">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A391"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A518">
+    <rdf:rest rdf:nodeID="A135"/>
+    <rdf:first rdf:nodeID="A109"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#HighDTIApplicant">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#FinancialRejection"/>
+    <owl:equivalentClass rdf:nodeID="A517"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A266">
+    <rdf:rest rdf:nodeID="A439"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#ApprovedRetireePersonalLoanApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#requestedLoanAmount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A498">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#TechnicalRejection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A336">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A133"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A503">
+    <rdf:rest rdf:nodeID="A434"/>
+    <rdf:first rdf:nodeID="A294"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#SiriNiwasa">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#HousingLoan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Retiree">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Applicant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A483">
+    <owl:withRestrictions rdf:nodeID="A453"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A324">
+    <owl:someValuesFrom rdf:nodeID="A484"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasDTI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A415"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#monthsInEmployment">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A172">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#NationalIdentityCard"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasDocument"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A409">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isPermanentRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#EducationLoan">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Loan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A388">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40000</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A234">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A112">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A235"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A501">
+    <rdf:rest rdf:nodeID="A309"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SalariedEmployee"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Guarantor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A447">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#isSriLankan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A257">
+    <owl:someValuesFrom rdf:nodeID="A129"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasMonthlyIncome"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:someValuesFrom rdf:nodeID="A454"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasCollateral"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#NonVestingCertificate">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A206">
+    <owl:complementOf rdf:nodeID="A475"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A436">
+    <owl:intersectionOf rdf:nodeID="A466"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A385">
+    <rdf:rest rdf:nodeID="A341"/>
+    <rdf:first rdf:nodeID="A250"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#ProfessionalCert">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#CourseCategory"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000000</xsd:maxInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A270">
+    <owl:withRestrictions rdf:nodeID="A111"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A197">
+    <rdf:rest rdf:nodeID="A519"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontology/loan_approval#Degree">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/loan_approval#CourseCategory"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A290">
+    <owl:someValuesFrom rdf:nodeID="A515"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasLoanTenure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A490">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#appliesFor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A239">
+    <owl:withRestrictions rdf:nodeID="A207"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A516">
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SuitableGuarantor"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontology/loan_approval#hasGuarantor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A489">
+    <rdf:rest rdf:nodeID="A460"/>
+    <rdf:first rdf:nodeID="A300"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A383">
+    <rdf:rest rdf:nodeID="A114"/>
+    <rdf:first rdf:nodeID="A79"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A348">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first rdf:nodeID="A394"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A482">
+    <rdf:rest rdf:nodeID="A511"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#TechnicalRejection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A253">
+    <rdf:rest rdf:nodeID="A329"/>
+    <rdf:first rdf:nodeID="A419"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A464">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A514"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A113">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A191">
+    <rdf:rest rdf:nodeID="A518"/>
+    <rdf:first rdf:nodeID="A437"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A401">
+    <rdf:rest rdf:nodeID="A520"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#SelfEmployed"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A521">
+    <rdf:rest rdf:nodeID="A474"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#DisputedTitleApplicant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A376">
+    <owl:unionOf rdf:nodeID="A521"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A513">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A67"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A488">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A445"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A456">
+    <rdf:rest rdf:nodeID="A485"/>
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontology/loan_approval#PersonalLoan"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A123">
+    <owl:withRestrictions rdf:nodeID="A500"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A519">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A295"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A520">
+    <rdf:rest rdf:nodeID="A60"/>
+    <rdf:first rdf:nodeID="A459"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A452">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A378"/>
+  </rdf:Description>
+</rdf:RDF>

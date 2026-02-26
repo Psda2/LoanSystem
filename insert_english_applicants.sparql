@@ -1,0 +1,109 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX loan: <http://www.semanticweb.org/ontology/loan_approval#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+  # Sahan Dileepa - Approved Salaried
+  loan:App_SahanDileepa rdf:type loan:SalariedEmployee ;
+                        rdfs:label "Sahan Dileepa" ;
+                        loan:hasAge 30 ;
+                        loan:hasMonthlyIncome 200000 ;
+                        loan:hasCRIBScore 800 ;
+                        loan:hasDTI 0.15 ;
+                        loan:isResident true ;
+                        loan:isSriLankan true ;
+                        loan:isPermanentRole true ;
+                        loan:hasPreviousArrears false ;
+                        loan:appliesFor loan:Loan_Sahan .
+  
+  loan:Loan_Sahan rdf:type loan:PersonalLoan ;
+                  rdfs:label "Personal Development - Sahan" ;
+                  loan:requestedLoanAmount 500000 ;
+                  loan:hasLoanTenure 24 .
+
+  # Nimal Silva - Approved Housing
+  loan:App_NimalSilva rdf:type loan:SalariedEmployee ;
+                      rdfs:label "Nimal Silva" ;
+                      loan:hasAge 45 ;
+                      loan:hasMonthlyIncome 150000 ;
+                      loan:hasCRIBScore 750 ;
+                      loan:hasDTI 0.25 ;
+                      loan:isResident true ;
+                      loan:isSriLankan true ;
+                      loan:isPermanentRole true ;
+                      loan:hasPreviousArrears false ;
+                      loan:appliesFor loan:Loan_Nimal .
+  
+  loan:Loan_Nimal rdf:type loan:HousingLoan ;
+                  rdfs:label "Home Construction - Nimal" ;
+                  loan:requestedLoanAmount 5000000 ;
+                  loan:hasLoanTenure 120 .
+
+  # Kamal Perera - Rejected High DTI
+  loan:App_KamalPerera rdf:type loan:SelfEmployed ;
+                       rdfs:label "Kamal Perera" ;
+                       loan:hasAge 38 ;
+                       loan:hasMonthlyIncome 80000 ;
+                       loan:hasCRIBScore 680 ;
+                       loan:hasDTI 0.65 ;
+                       loan:isResident true ;
+                       loan:isSriLankan true ;
+                       loan:hasBusinessRegistration true ;
+                       loan:hasPreviousArrears false ;
+                       loan:appliesFor loan:Loan_Kamal .
+  
+  loan:Loan_Kamal rdf:type loan:PersonalLoan ;
+                  rdfs:label "Business Expansion - Kamal" ;
+                  loan:requestedLoanAmount 1000000 ;
+                  loan:hasLoanTenure 48 .
+
+  # Dilani Wijesekara - Pending Education
+  loan:App_DilaniWijesekara rdf:type loan:Student ;
+                           rdfs:label "Dilani Wijesekara" ;
+                           loan:hasAge 22 ;
+                           loan:hasMonthlyIncome 30000 ;
+                           loan:isSriLankan true ;
+                           loan:appliesFor loan:Loan_Dilani .
+  
+  loan:Loan_Dilani rdf:type loan:EducationLoan ;
+                   rdfs:label "MSc Degree - Dilani" ;
+                   loan:requestedLoanAmount 500000 ;
+                   loan:hasLoanTenure 60 .
+
+  # Sunil Chandrasiri - Approved Personal
+  loan:App_SunilChandrasiri rdf:type loan:Retiree ;
+                           rdfs:label "Sunil Chandrasiri" ;
+                           loan:hasAge 62 ;
+                           loan:hasMonthlyIncome 90000 ;
+                           loan:hasCRIBScore 710 ;
+                           loan:hasDTI 0.2 ;
+                           loan:isResident true ;
+                           loan:isSriLankan true ;
+                           loan:hasPensionProof true ;
+                           loan:hasPreviousArrears false ;
+                           loan:appliesFor loan:Loan_Sunil .
+  
+  loan:Loan_Sunil rdf:type loan:PersonalLoan ;
+                  rdfs:label "Home Improvement - Sunil" ;
+                  loan:requestedLoanAmount 800000 ;
+                  loan:hasLoanTenure 36 .
+
+  # Anoma Rathnayaka - Rejected Low CRIB
+  loan:App_AnomaRathnayaka rdf:type loan:SalariedEmployee ;
+                          rdfs:label "Anoma Rathnayaka" ;
+                          loan:hasAge 32 ;
+                          loan:hasMonthlyIncome 120000 ;
+                          loan:hasCRIBScore 450 ;
+                          loan:hasDTI 0.3 ;
+                          loan:isResident true ;
+                          loan:isSriLankan true ;
+                          loan:isPermanentRole true ;
+                          loan:hasPreviousArrears true ;
+                          loan:appliesFor loan:Loan_Anoma .
+  
+  loan:Loan_Anoma rdf:type loan:PersonalLoan ;
+                  rdfs:label "Emergency Medical - Anoma" ;
+                  loan:requestedLoanAmount 1500000 ;
+                  loan:hasLoanTenure 60 .
+}

@@ -1,0 +1,16 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX loan: <http://www.semanticweb.org/ontology/loan_approval#>
+
+DELETE { ?s ?p ?o }
+WHERE {
+  ?s ?p ?o .
+  {
+    ?s rdf:type/rdfs:subClassOf* loan:Applicant .
+  }
+  UNION
+  {
+    ?s rdf:type/rdfs:subClassOf* loan:Loan .
+    FILTER(?s != loan:Loan && ?s != loan:PersonalLoan && ?s != loan:HousingLoan && ?s != loan:EducationLoan && ?s != loan:GoldLoan && ?s != loan:VanithaAruna && ?s != loan:InterestFreeStudentLoan)
+  }
+}

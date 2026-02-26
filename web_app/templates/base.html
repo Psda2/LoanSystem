@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}NSB Loan System{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=3.1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="multi-page-layout">
+    <header class="navbar">
+        <div class="navbar-brand">
+            <span class="logo-icon">🏦</span>
+            <h2>APEX LOAN PORTAL</h2>
+        </div>
+        <nav class="navbar-links">
+            <a href="{{ url_for('dashboard') }}" class="nav-link {% if request.endpoint == 'dashboard' %}active{% endif %}">
+                📊 Dashboard
+            </a>
+            <a href="{{ url_for('applicant') }}" class="nav-link {% if request.endpoint == 'applicant' %}active{% endif %}">
+                👤 Loan Applicant
+            </a>
+            <a href="{{ url_for('status') }}" class="nav-link {% if request.endpoint == 'status' %}active{% endif %}">
+                🛡️ Loan Status
+            </a>
+            <a href="{{ url_for('predictor') }}" class="nav-link {% if request.endpoint == 'predictor' %}active{% endif %}">
+                ⚖️ Suitability Advisor
+            </a>
+            <a href="{{ url_for('sparql_terminal') }}" class="nav-link {% if request.endpoint == 'sparql_terminal' %}active{% endif %}">
+                🔍 Knowledge Studio
+            </a>
+        </nav>
+        <div class="navbar-user">
+            <span class="admin-badge">Officer Access</span>
+        </div>
+    </header>
+
+    <main class="content-area">
+        <section class="page-content">
+            {% block content %}{% endblock %}
+        </section>
+    </main>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
